@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var serverConfig 	= require('../config/serverConfig');
+var server			= require('../server');
+
+// start app ===============================================
+server.listen(serverConfig.port, function(){
+	console.log('Proxy Listen on Port ' + serverConfig.port);
+});
