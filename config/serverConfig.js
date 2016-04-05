@@ -1,4 +1,4 @@
 var serverConfig = {
-	port : 80
+	port : 8080
 }
 module.exports = serverConfig;

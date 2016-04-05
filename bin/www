@@ -4,6 +4,7 @@ var serverConfig 	= require('../config/serverConfig');
 var server			= require('../server');
 
 // start app ===============================================
-server.listen(serverConfig.port, function(){
-	console.log('Proxy Listen on Port ' + serverConfig.port);
+server.set('port', (process.env.PORT || serverConfig.port));
+server.listen(server.get('port'), function(){
+	console.log('Proxy Listen on Port ' + server.get('port'));
 });
