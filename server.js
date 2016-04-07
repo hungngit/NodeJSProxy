@@ -24,7 +24,7 @@ var apiProxy = httpProxy.createProxyServer(proxyOptions);
 var server = express();
 server.use(express.static(__dirname + '/public'));
 
-server.all('/proxy*', function(req, res) {
+server.all('/proxy', function(req, res) {
 	if (!req.query.url){
 		res.send('Please, put parameter url with encode!');
 		return;
